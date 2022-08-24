@@ -6,7 +6,7 @@ const slides = [
 	'./img/03.jpg',
 	'./img/04.jpg',
 	'./img/05.jpg',
-]
+];
 
 const app = new Vue({
 	el: '#root',
@@ -17,10 +17,11 @@ const app = new Vue({
 	},
 	methods: {
 		next() {
-			this.index === 4 ?  this.index = 0 : this.index++
+			this.index === slides.length-1 ?  this.index = 0 : this.index++;
 		},
 		prev() {
-			this.index === 0 ?  this.index = 4 : this.index--
+			this.index === 0 ?  this.index = 4 : this.index--;
 		},
 	},
 });
+ 
