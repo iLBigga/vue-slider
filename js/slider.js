@@ -7,3 +7,20 @@ const slides = [
 	'./img/04.jpg',
 	'./img/05.jpg',
 ]
+
+const app = new Vue({
+	el: '#root',
+	data: {
+		index: 0,
+		active: 'slide active',
+		slides,
+	},
+	methods: {
+		next() {
+			this.index === 4 ?  this.index = 0 : this.index++
+		},
+		prev() {
+			this.index === 0 ?  this.index = 4 : this.index--
+		},
+	},
+});
